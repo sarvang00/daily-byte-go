@@ -1,4 +1,4 @@
-package main
+package palin_on_removal
 
 import (
 	"fmt"
@@ -6,9 +6,9 @@ import (
 	"strings"
 )
 
-func main() {
-	testIsPalindromeOnRemoval()
-}
+// func main() {
+// 	testIsPalindromeOnRemoval()
+// }
 
 func cleanString(ipString string) string {
 	var nonAlphanumericRegex = regexp.MustCompile(`[^a-zA-Z0-9]+`)
@@ -55,7 +55,7 @@ func testIsPalindromeOnRemoval() {
 			fmt.Printf("Passed %d!!\n", i+1)
 			continue
 		} else {
-			fmt.Printf("Input:%s Output:\"%s\"\n", loloString[i], testResults[i])
+			fmt.Printf("Input:%s Output:\"%t\"\n", loloString[i], testResults[i])
 			fmt.Printf("Failing %d!!\n", i+1)
 			break
 		}
