@@ -1,31 +1,36 @@
 package two_sum
 
-import (
-	"fmt"
-)
+import "fmt"
 
-// func main() {
-// 	testTwoSum()
-// }
+// import (
+// 	"fmt"
+// )
 
-func TwoSum(ipVals []int, k int) bool {
-	for i := 0; i < len(ipVals); i++ {
-		for j := i + 1; j < len(ipVals); j++ {
-			if ipVals[i]+ipVals[j] == k {
-				return true
-			}
+func main() {
+	testTwoSumOptimal()
+}
+
+func TwoSumOptimal(ipVals []int, k int) bool {
+	var diffMap = make(map[int]int)
+	for iter := range ipVals {
+		diff := k - ipVals[iter]
+		_, diffCheck := diffMap[diff]
+		if diffCheck {
+			return true
+		} else {
+			diffMap[ipVals[iter]] = ipVals[iter]
 		}
 	}
 	return false
 }
 
-func testTwoSum() {
+func testTwoSumOptimal() {
 	testVals := [][]int{{1, 3, 8, 2}, {3, 9, 13, 7}, {4, 2, 6, 5, 2}}
 	testKs := []int{10, 8, 4}
 	expectedResults := []bool{true, false, true}
 	testResults := []bool{}
 	for testCaseIdx := range testKs {
-		testResults = append(testResults, TwoSum(testVals[testCaseIdx], testKs[testCaseIdx]))
+		testResults = append(testResults, TwoSumOptimal(testVals[testCaseIdx], testKs[testCaseIdx]))
 	}
 	for i := range testResults {
 		if testResults[i] == expectedResults[i] {
