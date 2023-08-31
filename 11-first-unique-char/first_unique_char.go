@@ -1,12 +1,12 @@
-package main
+package first_unique_char
 
 import (
 	"fmt"
 )
 
-func main() {
-	testFirstUniqueChar()
-}
+// func main() {
+// 	testFirstUniqueChar()
+// }
 
 func FirstUniqueChar(ipString string) int {
 	if len(ipString) == 0 {
