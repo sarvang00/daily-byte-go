@@ -1,13 +1,14 @@
-// package spot_the_diff
-package main
+package intersection_of_nums
+
+// package main
 
 import (
 	"fmt"
 )
 
-func main() {
-	testIntersectionOfNums()
-}
+// func main() {
+// 	testIntersectionOfNums()
+// }
 
 func IntersectionOfNums(ipArr1 []int, ipArr2 []int) []int {
 	arrMap := []int{}
