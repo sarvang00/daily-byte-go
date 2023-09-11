@@ -1,4 +1,4 @@
-package main
+package validateChars
 
 import (
 	"fmt"
@@ -96,7 +96,7 @@ func runTestCase(ipStr string) bool {
 	return newStack.isComplete()
 }
 
-func main() {
+func RunTestCases() {
 	testCase1 := "(){}[]"
 	fmt.Printf("%v Result: %v\n", testCase1, runTestCase(testCase1) == true)
 	testCase2 := "(({[]}))"
